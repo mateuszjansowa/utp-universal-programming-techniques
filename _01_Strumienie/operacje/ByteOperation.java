@@ -14,8 +14,11 @@ public class ByteOperation {
             while ((c = in.read()) != -1) {
                 out.write(c);
             }
+
+            in.close();
+            out.close();
         } catch (IOException e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 }

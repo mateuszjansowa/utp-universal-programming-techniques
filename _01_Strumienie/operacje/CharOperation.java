@@ -15,8 +15,11 @@ public class CharOperation {
             while((c = fileReader.read()) != -1) {
                 fileWriter.write(c);
             }
+
+            fileReader.close();
+            fileWriter.close();
         } catch(IOException e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 }
