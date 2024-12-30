@@ -1,0 +1,2 @@
+Witaj, ¶wiecie!
+Kodowanie znaków w Javie.
