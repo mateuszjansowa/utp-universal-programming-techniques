@@ -7,6 +7,9 @@ public class ListIteratorExample {
         List<String> list = new LinkedList<>(Arrays.asList("A", "B", "C", "D"));
 
         ListIterator<String> iterator = list.listIterator();
+        System.out.println("list.size(): " + list.size());
+        System.out.println("list.contains('A'): " + list.contains("A"));
+        System.out.println();
 
         while (iterator.hasNext()) {
             System.out.println("Next: " + iterator.next());

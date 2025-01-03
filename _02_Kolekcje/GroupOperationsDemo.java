@@ -5,6 +5,7 @@ import java.util.*;
 public class GroupOperationsDemo {
     public static void main(String[] args) {
         List<String> list = new ArrayList<>(List.of("Ala", "ma", "kota"));
+        list.add("psa");
         Set<String> set = new HashSet<>(list);
 
         System.out.println("List: " + list);
