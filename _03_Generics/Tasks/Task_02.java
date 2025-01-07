@@ -2,7 +2,6 @@ package _03_Generics.Tasks;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 
 public class Task_02 {
     public static <T extends Comparable<T>> Pair minMax(T[] numbers) {
