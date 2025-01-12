@@ -36,4 +36,21 @@ public class Counter {
     public void removePropertyChangeListener(PropertyChangeListener listener) {
         propertyChange.removePropertyChangeListener(listener);
     }
+
+    public static void main(String[] args) {
+        Counter counter = new Counter();
+        final boolean[] isNotified = {false};
+        counter.addPropertyChangeListener(evt -> {
+            if ("count".equals(evt.getPropertyName())) {
+                isNotified[0] = true;
+                System.out.println(evt.getOldValue());
+                System.out.println(evt.getNewValue());
+            }
+        });
+        try {
+            counter.setCount(5);
+        } catch (PropertyVetoException e) {
+            e.getMessage();
+        }
+    }
 }
